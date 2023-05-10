@@ -11,11 +11,11 @@
 
 <body>
     <div id="unity-container" class="unity-desktop">
-        <div id="controls">
-            <h4 style="margin: 0;">Controls</h4>
-            <p style="margin-top: 0;">Move: WASD, Look: Mouse, Jump: Space, Sprint: Shift, Respawn: R</p>
+        <div>
+            <h4 style="margin-top: 0">Controls</h4>
+            <p>Move: WASD, Look: Mouse, Jump: Space, Sprint: Left Shift, Respawn: R</p>
         </div>
-        <canvas id="unity-canvas" width=960 height=600></canvas>
+        <canvas id="unity-canvas" width=960 height=720></canvas>
         <div id="unity-loading-bar">
             <div id="unity-logo"></div>
             <div id="unity-progress-bar-empty">
@@ -28,7 +28,7 @@
             <div id="unity-fullscreen-button"></div>
             <div id="unity-build-title">CISProject</div>
         </div>
-        <p>Warning: Don't move and respawn!</p>
+        <p>Warning! Don't Move While Respawning</p>
     </div>
     <script>
         var container = document.querySelector("#unity-container");
@@ -69,9 +69,9 @@
             frameworkUrl: buildUrl + "/cis-project.framework.js.unityweb",
             codeUrl: buildUrl + "/cis-project.wasm.unityweb",
             streamingAssetsUrl: "StreamingAssets",
-            companyName: "DefaultCompany",
+            companyName: "com.zachburnaby",
             productName: "CISProject",
-            productVersion: "0.1",
+            productVersion: "1",
             showBanner: unityShowBanner,
         };
 
@@ -101,7 +101,7 @@
             // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
             canvas.style.width = "960px";
-            canvas.style.height = "600px";
+            canvas.style.height = "720px";
         }
 
         loadingBar.style.display = "block";
